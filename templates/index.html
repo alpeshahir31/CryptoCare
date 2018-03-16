@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+	 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="static/css/blog-post.css" rel="stylesheet">
+
+    <title>CryptoCare</title>
+    <link rel="shortcut icon" href="../static/images/logo_bQ8_icon.ico" type="image/x-icon"> 
+	
+</head>
+ 
+<body>
+
+	
+	<!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="../static/images/logo.png" width="30" height="30">CryptoCare</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	
+	
+ 
+   <div class="container">
+		
+
+      <div class="row">
+		  
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+
+          <!-- Title -->
+          <h4 class="mt-4" align="center">All Cryptocurrencies</h4>
+
+			 <table style="width=100%" class="table">
+            <tr>
+                <th>Name</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>High</th>
+                <th>Low</th>
+            </tr>
+            {% for cryptocurrency in cryptocurrencies %}
+                <tr>
+                    <td>
+                       <a href="{{cryptocurrency.asset_id}}">{{cryptocurrency.name}}</a>         
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_open}}
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_close}}
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_high}}
+                    </td>
+                    <td>
+                    {{cryptocurrency.cr_low}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+ <div class="col-md-4">
+	<!-- Categories Widget -->
+    <div class="card my-4">
+    <div class="card-body">
+    <div class="row">
+    <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/cryptocurrency" data-widget-id="970802186467688450" data-height="400" data-chrome=“nofooter transparent>#cryptocurrency Tweets</a>
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              </div>
+            </div>
+          </div>
+
+          <!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            </div>
+          </div>
+			
+			<!-- Side Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Side Widget</h5>
+            <div class="card-body">
+              You can put anything you want inside of these side widgets. They are easy to use, and feature the new Bootstrap 4 card containers!
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="static/vendor/jquery/jquery.min.js"></script>
+    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
