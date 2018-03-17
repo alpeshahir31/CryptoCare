@@ -3,11 +3,6 @@
 # -*- Author: aB9 -*-
 # -*- Date: 03/12 -*-
 
-#######################
-## Known bugs:
-##1. Index Page should refresh with the latest values when we come from details page
-####################
-
 from flask import Flask, render_template
 import requests
 import ObjCryptoCurrency
@@ -29,6 +24,7 @@ cryptocurrencies_data =[]
 @app.route("/")
 def index():
     
+    cryptocurrencies_data= []
     for currency in crc_list:
         #URL to get current price data
         URL = 'https://min-api.cryptocompare.com/data/histominute?fsym={}&tsym=USD&limit=1&aggregate=3&e=CCCAGG'.format(crc_list[currency])

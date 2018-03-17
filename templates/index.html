@@ -59,11 +59,11 @@
 
         <!-- Post Content Column -->
         <div class="col-lg-8">
-
+        
           <!-- Title -->
-          <h4 class="mt-4" align="center">All Cryptocurrencies</h4>
+          <h4 class="mt-4" align="center">All Cryptocurrecies</h4>
 
-			 <table style="width=100%" class="table">
+			 <table id= "currencytable" style="width=100%" class="table">
             <tr>
                 <th>Name</th>
                 <th>Open</th>
@@ -72,7 +72,7 @@
                 <th>Low</th>
             </tr>
             {% for cryptocurrency in cryptocurrencies %}
-                <tr>
+                <tr id="dataRow">
                     <td>
                        <a href="{{cryptocurrency.asset_id}}">{{cryptocurrency.name}}</a>         
                     </td>
